@@ -55,32 +55,36 @@ export default function SetAvatar() {
     }
   };
 
-  useEffect(() => {
-    const fetchAvatars = async () => {
-      const data = [];
-      for (let i = 0; i < 4; i++) {
-        try {
-          const response = await axios.get(
-            `${api}/${Math.round(Math.random() * 1000)}`,
-            { responseType: 'arraybuffer' }
-          );
-          
+ useEffect(() => {
+ const fetchAvatars = async () => {
+  const data = [];
+  for (let i = 0; i < 4; i++) {
+    try {
+      const id = Math.round(Math.random() * 1000);
+      const response = await axios.get(`http://localhost:5000/api/auth/${id}`, {
+        responseType: 'arraybuffer',
+      });
 
-          const buffer = Buffer.from(response.data);
-         
+      const base64 = btoa(
+        new Uint8Array(response.data).reduce(
+          (data, byte) => data + String.fromCharCode(byte),
+          ''
+        )
+      );
+      data.push(base64);
+    } catch (error) {
+      toast.error("Error fetching avatars", toastOptions);
+      console.error("Avatar fetch error:", error);
+    }
+  }
+  setAvatars(data);
+  setIsLoading(false);
+};
 
-          data.push(buffer.toString("base64"));
 
-        } catch (error) {
-          toast.error("Error fetching avatars", toastOptions);
-        }
-      }
-      setAvatars(data);
-      setIsLoading(false);
-    };
+  fetchAvatars();
+}, []);
 
-    fetchAvatars();
-  }, []);
 
   return (
     <>
