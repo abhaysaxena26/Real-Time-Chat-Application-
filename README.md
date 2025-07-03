@@ -1,85 +1,46 @@
-# Chaos
+# 💬 Real-Time Chat Application
 
-Chaos is a real-time chat application that allows users to communicate with each other using Socket.IO. Users can send text messages along with emoticons, and set avatars for their profiles. The application is built using the MERN stack, with additional features provided by bcrypt for secure password hashing and the Multiavatar API for avatar customization.
+A modern real-time chat application built with the **MERN stack** that allows users to communicate instantly using **Socket.IO**. It supports **emoticons**, **custom avatars**, and **secure authentication** via `bcrypt`. Users can personalize their profiles using the **Multiavatar API**.
 
-## Features
+---
 
-- **Real-Time Messaging:** Users can send and receive messages in real time using Socket.IO.
-- **Emoticons:** Users can enhance their messages with a variety of emoticons.
-- **Avatar Customization:** Users can set custom avatars for their profiles using the Multiavatar API.
-- **Secure Authentication:** User passwords are securely hashed using bcrypt.
+## 🚀 Features
 
-## Technologies Used
+- ⚡ **Real-Time Messaging:** Chat live with other users through WebSocket-based communication.
+- 😀 **Emoticon Support:** Express yourself better with built-in emoji support.
+- 🧑‍🎨 **Custom Avatars:** Personalize your profile using the Multiavatar API.
+- 🔐 **Secure Authentication:** Passwords are securely hashed using `bcrypt`.
+- 🧩 **Modular Codebase:** Clean separation between backend and frontend for easy maintainability.
 
-- **Frontend:**
-  - React
-  - styled-components
-  - Axios
+---
 
-- **Backend:**
-  - Node.js
-  - Express
+## 🛠️ Tech Stack
 
-- **Database:**
-  - MongoDB
+### 🖥️ Frontend
+- **React.js**
+- **styled-components**
+- **Axios**
 
-- **Authentication:**
-  - bcrypt.js
+### 🖥️ Backend
+- **Node.js**
+- **Express.js**
 
-- **Real-Time Communication:**
-  - Socket.IO
+### 🧠 Database
+- **MongoDB**
 
-- **Avatar Customization:**
-  - Multiavatar API
+### 🔐 Authentication
+- **bcrypt.js**
 
-## Installation
+### 🔌 Real-Time Communication
+- **Socket.IO**
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/samarthag06/Real-time-chat.git
-    ```
+### 🎭 Avatar API
+- **Multiavatar API**
 
-2. Navigate to the project directory:
-    ```bash
-    cd Chaos
-    ```
+---
 
-3. Install server dependencies:
-    ```bash
-    cd server
-    npm install
-    ```
+## 📦 Installation Guide
 
-4. Install client dependencies:
-    ```bash
-    cd public
-    npm install
-    ```
-
-## Running the Application
-
-1. Start the backend server:
-    ```bash
-    cd server
-    npm start
-    ```
-
-2. Start the frontend server:
-    ```bash
-    cd public
-    npm start
-    ```
-
-3. Open your browser and navigate to `http://localhost:3000` to see the application.
-
-## Screenshots
-
-### Login Page
-![Home Page](public/src/utils/Login.png)
-
-### Avatar selection
-![Booking Appointment](public/src/utils/Avatar.png)
-
-### Dashboard
-![Manage Profile](public/src/utils/Application.png)
-
+### 1. Clone the Repository
+```bash
+https://github.com/abhaysaxena26/Real-Time-Chat-Application-
